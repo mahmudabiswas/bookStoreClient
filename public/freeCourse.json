@@ -1,0 +1,45 @@
+[
+    {
+      "img": "https://i.ibb.co/0c58fpT/book1.jpg",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Fiction",
+      "price": 10.99
+    },
+    {
+      "img": "https://i.ibb.co/MCPGDP3/book2.jpg",
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Fiction",
+      "price": 9.99
+    },
+    {
+      "img": "https://i.ibb.co/SQTKQbL/book3.jpg",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Fiction",
+      "price": 8.99
+    },
+    {
+      "img": "https://i.ibb.co/LZshz35/books.jpg",
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "genre": "Non-Fiction",
+      "price": 14.99
+    },
+    {
+      "img": "https://i.ibb.co/z5Pn3vR/book5.jpg",
+      "title": "Educated",
+      "author": "Tara Westover",
+      "genre": "Non-Fiction",
+      "price": 12.99
+    },
+    {
+      "img": "https://i.ibb.co/cxX5SDB/book6.jpg",
+      "title": "Becoming",
+      "author": "Michelle Obama",
+      "genre": "Non-Fiction",
+      "price": 16.99
+    }
+  ]
+  
