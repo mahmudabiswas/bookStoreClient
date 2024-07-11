@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DropDown = () => {
   return (
@@ -18,7 +19,7 @@ const DropDown = () => {
         className="dropdown-content menu bg-red-400 rounded-box z-[1] w-40 p-2 shadow"
       >
         <li>
-          <a>Item 1</a>
+          <Link to="/login">Login</Link>
         </li>
         <li>
           <a>Item 2</a>

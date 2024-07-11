@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ColorThem from "./colorThem";
 import DropDown from "./DropDown";
 import SearchBar from "./SearchBar";
@@ -20,14 +20,10 @@ const Navbar = () => {
       <li>
         <NavLink to="/about">About</NavLink>
       </li>
-
-      <li>
-        <NavLink to="/footer">Footer</NavLink>
-      </li>
     </>
   );
   return (
-    <div className="navbar bg-red-400 text-white ">
+    <div className="navbar dark:bg-slate-900 dark:text-white bg-red-400 text-white ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +44,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-red-400  rounded-md z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content dark:bg-slate-900 dark:text-white bg-red-400  rounded-md z-[1] mt-3 w-52 p-2 shadow"
           >
             {navItems}
           </ul>
@@ -66,7 +62,6 @@ const Navbar = () => {
         <SearchBar />
         {/* color them */}
         <ColorThem />
-
         {/* dropdown */}
         <DropDown />
       </div>

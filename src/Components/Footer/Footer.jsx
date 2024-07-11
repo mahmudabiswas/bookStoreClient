@@ -4,12 +4,12 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <div className=" my-12 bg-gray-100 flex flex-col">
+      <div className=" my-12 dark:bg-slate-900 dark:text-white bg-gray-100 flex flex-col">
         {/* <!-- Main Content --> */}
         <div className="flex-grow"></div>
 
         {/* <!-- Footer --> */}
-        <footer className="bg-blue-900 text-white py-8">
+        <footer className="dark:bg-slate-900 dark:text-white bg-slate-900 text-white py-8">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* <!-- About Us --> */}

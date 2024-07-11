@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ColorThem = () => {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
   return (
     <label className="swap swap-rotate">
       {/* this hidden checkbox controls the state */}
-      <input type="checkbox" className="theme-controller" value="synthwave" />
+      <input
+        onChange={handleToggle}
+        checked={theme === "light" ? false : true}
+        type="checkbox"
+        className="theme-controller"
+      />
 
       {/* sun icon */}
       <svg
