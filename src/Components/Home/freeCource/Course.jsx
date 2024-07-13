@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import Courses from "./Courses";
 import BookText from "./bookText";
 import BookLogoHeading from "./bookLogoHeading";
+import UseAxios from "../../Hooks/useAxios";
 
 const Course = () => {
   const [course, setCourse] = useState([]);
+  const axios = UseAxios();
   useEffect(() => {
-    fetch("http://localhost:5000/books")
-      .then((res) => res.json())
-      .then((data) => setCourse(data));
+    axios.get("/books").then((res) => {
+      setCourse(res.data);
+    });
   }, []);
   return (
     <div className=" my-12  min-h-screen m-auto">

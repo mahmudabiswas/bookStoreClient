@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 import Login from "../Social/Login";
 import Register from "../Social/Register";
 import Booking from "../Pages/BookingPage/Booking";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/course",
         element: <Course />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/booking/:id",

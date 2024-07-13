@@ -1,7 +1,10 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <div>
       <button
@@ -21,19 +24,23 @@ const Login = () => {
           <h3 className="font-bold text-lg">Log In!</h3>
           <p className="py-4">
             <div class="w-full max-w-lg">
-              <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+              >
                 <div class="mb-4">
                   <label
                     class="block text-gray-700 text-sm font-bold mb-2"
-                    for="username"
+                    for="email"
                   >
-                    Username
+                    Email
                   </label>
                   <input
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="username"
-                    type="text"
-                    placeholder="Username"
+                    id="email"
+                    type="email"
+                    placeholder="email"
+                    {...register("email")}
                   />
                 </div>
                 <div class="mb-6">
@@ -48,6 +55,7 @@ const Login = () => {
                     id="password"
                     type="password"
                     placeholder="******************"
+                    {...register("password")}
                   />
                   <p class="text-red-500 text-xs italic">
                     Please choose a password.
@@ -58,7 +66,12 @@ const Login = () => {
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="button"
                   >
-                    Sign In
+                    <input
+                      id="submit"
+                      type="Submit"
+                      placeholder="******************"
+                      {...register("submit")}
+                    />
                   </button>
                   <p class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
                     All Ready <br /> Have'an account <br /> please ?
